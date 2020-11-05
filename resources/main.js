@@ -26,8 +26,9 @@ const vm = new Vue({
                 newHeightChico += this.peoples[0].perYear;
                 newHeightJuca += this.peoples[1].perYear;
 
-                years++;
+                years++
             }
+
             return years;
         },
     },
