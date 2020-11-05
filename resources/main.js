@@ -18,9 +18,18 @@ const vm = new Vue({
             ]
         };
     },
-    methods: {
-        calculateHeightIncrement() {
-            console.log('oi')
+    computed: {
+        calculateHeight() {
+            let newHeightChico = this.peoples[0].height;
+            let newHeightJuca = this.peoples[1].height;
+            let years = 0;
+
+            while(newHeightJuca < newHeightChico) {
+                newHeightChico += this.peoples[0].perYear
+                newHeightJuca += this.peoples[1].perYear
+                years++;
+            }
+            return years;
         },
      }
-})
+});
