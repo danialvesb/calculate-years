@@ -2,7 +2,6 @@ const vm = new Vue({
     el: '#app',
     data() {
         return {
-            title: 'Anos necessários para que Juca seja maior que Chico',
             peoples: [{
                     name: 'Chico',
                     height: 1.50,
@@ -26,6 +25,7 @@ const vm = new Vue({
             while (newHeightJuca < newHeightChico) {
                 newHeightChico += this.peoples[0].perYear;
                 newHeightJuca += this.peoples[1].perYear;
+
                 years++;
             }
             return years;
